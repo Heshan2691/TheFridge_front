@@ -1,38 +1,109 @@
-.App {
+.app {
+  font-family: Arial, sans-serif;
   text-align: center;
+  background: #f7f9fc;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: darkblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-item-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 40px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  width: 75%;
+}
+
+.add-item-form input,
+.add-item-form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-item-form button {
+  background: darkblue;
   color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.item-list {
+  width: 80%;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  margin: 10px 0;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+
+.status.expired {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status.expiring-soon {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.healthy {
+  background: #d4edda;
+  color: #155724;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: red;
+}
+
+.item-list h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: darkblue;
+  margin-top: 10px;
+  text-align: right;
+  background-color: #fff;
+  padding: 10px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.status-expiring-soon {
+  background-color: #ff9800; /* Orange color */
+  color: #fff; /* White text */
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
