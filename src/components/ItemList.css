@@ -1,0 +1,78 @@
+.item-list {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.item-list-header,
+.item-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr; /* Adjust column sizes */
+  gap: 15px;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.item-list-header {
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+
+.item-row:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  font-size: 1rem;
+}
+
+.item-expiry {
+  color: #555;
+}
+
+.item-status {
+  font-weight: bold;
+  text-transform: capitalize;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.item-status.expired {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.item-status.expiring-soon {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.item-status.healthy {
+  background: #d4edda;
+  color: #155724;
+}
+
+.delete-icon {
+  color: #d9534f;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.delete-icon:hover {
+  color: #c9302c;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+span {
+  overflow-wrap: break-word;
+}

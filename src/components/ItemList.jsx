@@ -6,7 +6,7 @@ const ItemList = ({ items, onDeleteItem }) => {
     const today = new Date();
     const expiry = new Date(expiryDate);
     if (expiry < today) return "Expired";
-    if ((expiry - today) / (1000 * 60 * 60 * 24) <= 30) return "Expiring soon";
+    if ((expiry - today) / (1000 * 60 * 60 * 24) <= 30) return "Expiring-soon";
     return "Healthy";
   };
 
@@ -21,15 +21,20 @@ const ItemList = ({ items, onDeleteItem }) => {
       <h2>Total items — {items.length}</h2>
       {items.map((item) => (
         <div className="item" key={item.id}>
-          <span>{item.name}</span>
-          <span>Expiry date — {formatDate(item.expiryDate)}</span>
-          <span
-            className={`status ${calculateStatus(
-              item.expiryDate
-            ).toLowerCase()}`}
-          >
-            {calculateStatus(item.expiryDate)}
+          <span className="item-name">{item.name}</span>
+          <span className="item-expiry">
+            Expiry date — {formatDate(item.expiryDate)}
           </span>
+          <span className="align-items">
+            <span
+              className={`status ${calculateStatus(
+                item.expiryDate
+              ).toLowerCase()}`}
+            >
+              {calculateStatus(item.expiryDate)}
+            </span>
+          </span>
+
           <FaTrashAlt
             className="delete-icon"
             onClick={() => onDeleteItem(item.id)}
